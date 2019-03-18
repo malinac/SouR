@@ -15,12 +15,12 @@ body {
 	float: left;
     display: inline;
     margin: 0;
-    max-width: 7%;
 	width: 5%;
 	margin-left: 1%;
 	margin-top: 1%;
   }
-  
+
+ 
   nav {
 	position: relative;
 	z-index: 10;
@@ -33,7 +33,22 @@ body {
 	border-radius: 0.5em;
 	border-color: rgba(0, 0, 255, 0.5);
 	}
-  
+
+ 
+@media (orientation: portrait) {
+	.top-bar {
+		height: 8em;
+	}
+	.logo {
+		height: 6em;
+		width: 6em;
+	}
+	nav li a {
+	font-size: 1.5em;
+	}
+}
+ 
+@media (orientation: landscape) {
   nav ul {
 	display: flex;
 	flex-wrap: wrap;
@@ -43,8 +58,24 @@ body {
     padding: 0;
     list-style: none;
   }
+}
+ 
+ @media (orientation: portrait) {
+ 
+  nav ul {
+	display: flex;
+	float: right;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   
-  
+	}
+}
+
   nav > a {
     text-decoration: none;
 	text-align: center;
@@ -65,7 +96,7 @@ body {
 	position: relative;
 	z-index: 10s;
 	display: inline;
-	color: hsl(240, 100%, 80%);
+	color: hsl(290, 100%, 50%);
 	border-radius: 1em;
 	background-color: hsl(240, 100%, 95%);
 	border-left:5px #00e;
@@ -74,6 +105,7 @@ body {
 	transition-duration: 0.2s;
   }
   
+ @media (orientation: landscape) {
 .flex {
 	position: absolute;
 	z-index: 0;
@@ -82,13 +114,30 @@ body {
 	flex-wrap: wrap;
 	
 }
-
+ }
+ 
+  
+ @media (orientation: portrait) {
+.flex {
+	position: absolute;
+	z-index: 0;
+	margin-top: 3%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	
+}
+ }
+ 
 section {
 	margin: 0.5em;
 	padding: 0.5em;
 }
 
+ 
+ @media (orientation: landscape) {
 .options {
+	height: 32em;
 	position: sticky;
     position: -webkit-sticky;
 	top: 0;
@@ -97,14 +146,132 @@ section {
 	border-right: 1px solid black;
 	position: relative;
 	flex: 1;
-	height: 28em;
 	overflow: scroll;
 	border-left: 0px;
 }
+ }
+.bbox {
+	border-radius: 1em;
+	background-clip: padding-box;
+	text-align: center;
+}
+
+.bbuton {
+	position: relative;
+	display: block;
+	font-size: 1em;
+	border: 2px solid #06D85F;
+	border-radius: 1em;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+	text-align: center;
+	float: right;
+}
+
+.bbutton:hover {
+	background: hsl(240, 100%, 95%);
+}
+
+.overlay {
+	visibility: hidden;
+	position: fixed;
+	top:10%;
+	left:0;
+	z-index: -1;
+	width:100%;
+	height: 90%;
+	background: rgba(25, 25, 25, 0.8);
+	transition: opacity 500ms;	
+	opacity: 0;
+	}
+
+.overlay:target {
+	z-index: 5;
+	visibility:visible;
+	opacity: 1;
+}
+
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	width: 56%;
+	height: 70%;
+	background: rgba(240, 240, 240, 1);
+	position: relative;
+	transition: all 2s ease-in-out;
+	text-align: center;
+  }
+
+.popup h5 {
+	left: 5%;
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	transition: all 200ms;
+	font-size: 2em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+.popup .close:hover {
+	color: hsl(240, 100%, 95%);
+}
+.popup .content {
+	text-align: center;
+	display: block;
+	max-height: 30%;
+	overflow: auto;
+}
+
+.popup .buttondown {
+	position: absolute;
+	display: block;
+	font-size: 1em;
+	padding: 3px;
+	border: 2px solid #CCC;
+	border-radius: 1em;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+	text-align: center;
+	right: 1%;
+	bottom: 1%;
+}
+
+.popup .buttondown:hover {
+	background: hsl(240, 100%, 95%);
+}
+
+@media screen and (max-width: 700px){
+	.bbox{
+		width: 70%;
+  }
+	.popup{
+		width: 70%;
+  }
+}
+
+.hideO {
+	visibility: visible;
+	opacity: 1;
+}
+
+#dropD {
+	display: none;
+}
+
 .mainContent {
+	height: 32em;
 	flex: 2;
 	overflow: scroll;
-	height: 28em;
 }
 .photo-container{
 display: inline-grid;
@@ -145,7 +312,8 @@ display: inline-grid;
 }
 
 .rightSide {
-	flex: 2;
+	height: 32em;
+	flex: 1;
 	border-radius: 0.1em;
 	border-left: 1px solid black;
 	border-right: 0px;
@@ -153,7 +321,6 @@ display: inline-grid;
 	float: right;
 	overflow: scroll;
 	display: -webkit-scrollbar;
-	height: 28em;
 	}
 .buyitem img{
 	display: block;
