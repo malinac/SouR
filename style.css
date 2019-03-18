@@ -110,17 +110,37 @@ section {
 display: inline-grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
+	grid-row-gap: 5px;
+	grid-column-gap: 5px;
+	width: 70%;
+	margin-left: 10%;
 }
 .photo-container img{
 	display: block;
 	width: 100%;
 	float: left;
+	transition: transform .2s;
+}
+
+.photo-container img:hover{
+	-ms-transform: scale(1.5); /* IE 9 */
+	-webkit-transform: scale(1.5); /* Safari 3-8 */
+	transform: scale(2);
 }
 .export{
-	display: inline-flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	display: inline-block;
+	margin: auto;
+	padding-top: 10%;
+}
+.export button{
+	background-color: #3e7d3e; /* Green */
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
 	margin: auto;
 }
 
