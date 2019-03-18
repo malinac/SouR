@@ -107,13 +107,14 @@ section {
 	height: 28em;
 }
 .photo-container{
-	display: flex;
-	flex-wrap: wrap;
-	margin: auto;
-	justify-content: center;
+display: inline-grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 }
-.photo-column{
-	flex: 33%
+.photo-container img{
+	display: block;
+	width: 100%;
+	float: left;
 }
 .export{
 	display: inline-flex;
@@ -122,16 +123,7 @@ section {
 	justify-content: space-around;
 	margin: auto;
 }
-button{
-	background-color: #4CAF50; /* Green */
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-}
+
 .rightSide {
 	flex: 2;
 	border-radius: 0.1em;
@@ -143,8 +135,22 @@ button{
 	display: -webkit-scrollbar;
 	height: 28em;
 	}
+.buyitem img{
+	display: block;
+	margin: auto;
+}
+.buyitem button{
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+	margin: auto;
+}
 .buyitem{
-	margin-left: 20%;
-	padding: 30px;
+	padding-top: 10%;
 }
 
