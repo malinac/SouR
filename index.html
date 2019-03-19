@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>SouR</title>
   <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -29,29 +31,84 @@
   </nav>
 
   <main class="flex">
-	<section class="options">
-	<h3> Options </h3>
-	Lorem ipsum dolor sit amet,fsaadasf saca cas rqwe 	 qe adsa das dsad consectetur adipiscing 
-	</section>
+      <section class="options">
+          <h3> Options </h3>
+          <div id="hideOptions" class="hideO1">
+              <h5 class="bbox"> First you should set your trip </h5>
+              <a class="bbutton" href="#popup1"> Press this Button to open the map </a>
+          </div>
+          <div id="popup1" class="overlay">
+              <div class="popup">
+                  <h5> Set your trip on the map </h5>
+                  <a class="close" href="#">&times;</a>
+                  <div class="content">
+                      <p> Embeeded map API </p>
+                      <a id="buttonHide" class="buttondown" href="#hideOptions">Submit</a>
+                  </div>
+              </div>
+          </div>
+          <div id="dropD">
+              Check the boxes for the wished souvenirs categories
+              <label class="container">Kids Tehnological Toys
+                  <input type="checkbox" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+              </label>
+              <label class="container">Traditional items
+                  <input type="checkbox" name="radio">
+                  <span class="checkmark"></span>
+              </label>
+              <label class="container">Fashion/ Clothing
+                  <input type="checkbox" name="radio">
+                  <span class="checkmark"></span>
+              </label>
+              <label class="container">10 $ Deals
+                  <input type="checkbox" name="radio">
+                  <span class="checkmark" href="#dropIN"></span>
+                  <
+              </label>
+          </div>
+      </section>
 	<section class="mainContent">
         <h3>Your results are: </h3>
-        <div class="photo-container">
-            <img src="proiect%20tw/souvenirs/paris1.jpg"  style="max-width: fit-content" class="photo-item">
-            <img src="proiect%20tw/souvenirs/paris6.jpg"   class="photo-item">
-             <img src="proiect%20tw/souvenirs/paris2.jpg"  class="photo-item">
-            <img src="proiect%20tw/souvenirs/paris5.jpg"   class="photo-item">
-             <img src="proiect%20tw/souvenirs/paris7.jpg"  class="photo-item">
-            <img src="proiect%20tw/souvenirs/paris4.jpg"   class="photo-item">
-            <img src="proiect%20tw/souvenirs/paris9.jpg" class="photo-item">
-            <img src="proiect%20tw/souvenirs/paris8.jpg"   class="photo-item">
-            <img src="proiect%20tw/souvenirs/paris3.jpg"   class="photo-item">
+        <div id="photo-container">
+            <div class="photo-wrapper">
+            <img src="proiect%20tw/souvenirs/paris1.jpg"   class="photo-item">
+                <p>Price: 10 Euro</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="proiect%20tw/souvenirs/paris6.jpg"   class="photo-item">
+                <p>Price: 10 Euro</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="proiect%20tw/souvenirs/paris2.jpg"   class="photo-item">
+                <p>Price: 10 Euro</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="proiect%20tw/souvenirs/paris5.jpg"   class="photo-item">
+                <p>Price: 10 Euro</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="proiect%20tw/souvenirs/paris7.jpg"   class="photo-item">
+                <p>Price: 10 Euro</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="proiect%20tw/souvenirs/paris4.jpg"   class="photo-item">
+                <p>Price: 10 Euro</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="proiect%20tw/souvenirs/paris9.jpg"   class="photo-item">
+                <p>Price: 10 Euro</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="proiect%20tw/souvenirs/paris8.jpg"   class="photo-item">
+                <p>Price: 10 Euro</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="proiect%20tw/souvenirs/paris3.jpg"   class="photo-item">
+                <p>Price: 10 Euro</p>
+            </div>
         </div>
-        <div class="export">
-            <button>Export HTML</button>
-            <button>Export CSV</button>
-            <button>Export JSON</button>
-            <button>Export XML</button>
-        </div>
+
 	</section>
 	<section class="rightSide">
         <h3>Your selected item: </h3>
@@ -59,10 +116,20 @@
         <img src="proiect%20tw/souvenirs/paris7.jpg" width="200" >
         <p style="text-align: center">Price: 10 euro</p>
         <p style="text-align: center">Quantity <input type="number" name="quantity" min="1" max="5"></p>
-        <button>Buy now!</button>
+        <button>Buy online!</button>
+        </div>
+        <div id="export">
+            <p>Export your shopping list: </p><select>
+                <option value="0">Please select a format:</option>
+                <option value="HTML">HTML</option>
+                <option value="CSV">CSV</option>
+                <option value="JSON">JSON</option>
+                <option VALUE="XML">XML</option>
+            </select><button type="submit"><i class="far fa-check-circle"></i></button>
         </div>
 	</section>
   </main>
+  <script src="try.js"></script>
 
 </body>
 
