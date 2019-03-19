@@ -273,6 +273,13 @@ section {
 	flex: 2;
 	overflow: scroll;
 }
+
+@media (orientation: portrait) {
+	.mainContent {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;	
+	}
+}
 .photo-container{
 display: inline-grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -310,7 +317,7 @@ display: inline-grid;
 	font-size: 14px;
 	margin: auto;
 }
-
+@media (orientation: landscape) {
 .rightSide {
 	height: 32em;
 	flex: 1;
@@ -322,6 +329,8 @@ display: inline-grid;
 	overflow: scroll;
 	display: -webkit-scrollbar;
 	}
+}	
+
 .buyitem img{
 	display: block;
 	margin: auto;
