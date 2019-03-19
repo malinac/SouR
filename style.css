@@ -76,7 +76,8 @@ nav {
     }
 }
 
-nav > a {
+  nav > a {
+
     text-decoration: none;
     text-align: center;
     padding: .5em 1em;
@@ -127,8 +128,45 @@ nav li a:hover {
         flex-wrap: wrap;
 
     }
-}
+ }
+  
+ nav li a:hover {
+	position: relative;
+	z-index: 10s;
+	display: inline;
+	color: hsl(290, 100%, 50%);
+	border-radius: 1em;
+	background-color: hsl(240, 100%, 95%);
+	border-left:5px #00e;
+	border-right:5px #00e;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	transition-duration: 0.2s;
+  }
+  
+ @media (orientation: landscape) {
+.flex {
+	position: absolute;
+	z-index: 0;
+	margin-top: 3%;
+	display: flex;
+	flex-wrap: wrap;
 
+}
+ }
+ 
+  
+ @media (orientation: portrait) {
+.flex {
+	position: absolute;
+	z-index: 0;
+	margin-top: 3%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	
+}
+ }
+ 
 section {
     margin: 0.5em;
     padding: 0.5em;
@@ -330,6 +368,209 @@ section {
     flex: 2;
     overflow: scroll;
 }
+ @media (orientation: landscape) {
+.options {
+	height: 32em;
+	position: sticky;
+    position: -webkit-sticky;
+	top: 0;
+	float: left;
+	border-radius: 0.1em;
+	border-right: 1px solid black;
+	position: relative;
+	flex: 1;
+	overflow: scroll;
+	border-left: 0px;
+}
+ }
+.bbox {
+	border-radius: 1em;
+	background-clip: padding-box;
+	text-align: center;
+}
+
+.bbuton {
+	position: relative;
+	display: block;
+	font-size: 1em;
+	border: 2px solid #06D85F;
+	border-radius: 1em;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+	text-align: center;
+	float: right;
+}
+
+.bbutton:hover {
+	background: hsl(240, 100%, 95%);
+}
+
+.overlay {
+	visibility: hidden;
+	position: fixed;
+	top:10%;
+	left:0;
+	z-index: -1;
+	width:100%;
+	height: 90%;
+	background: rgba(25, 25, 25, 0.8);
+	transition: opacity 500ms;	
+	opacity: 0;
+	}
+
+.overlay:target {
+	z-index: 5;
+	visibility:visible;
+	opacity: 1;
+}
+
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	width: 56%;
+	height: 70%;
+	background: rgba(240, 240, 240, 1);
+	position: relative;
+	transition: all 2s ease-in-out;
+	text-align: center;
+  }
+
+.popup h5 {
+	left: 5%;
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	transition: all 200ms;
+	font-size: 2em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+.popup .close:hover {
+	color: hsl(240, 100%, 95%);
+}
+.popup .content {
+	text-align: center;
+	display: block;
+	max-height: 30%;
+	overflow: auto;
+}
+
+.popup .buttondown {
+	position: absolute;
+	display: block;
+	font-size: 1em;
+	padding: 3px;
+	border: 2px solid #CCC;
+	border-radius: 1em;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+	text-align: center;
+	right: 1%;
+	bottom: 1%;
+}
+
+.popup .buttondown:hover {
+	background: hsl(240, 100%, 95%);
+}
+
+@media screen and (max-width: 700px){
+	.bbox{
+		width: 70%;
+  }
+	.popup{
+		width: 70%;
+  }
+}
+
+.hideO {
+	visibility: visible;
+	opacity: 1;
+}
+
+#dropD {
+	display: none;
+	margin-top: 2em;
+}
+
+.container {
+  display: block;
+  position: relative;
+  margin-bottom: 1em;
+  padding-left: 2em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  margin-top: 0.5em;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.2em;
+  width: 1.2em;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+ 	top: 7.5px;
+	left: 7.5px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.mainContent {
+	height: 32em;
+	flex: 2;
+	overflow: scroll;
+}
+
+
+@media (orientation: portrait) {
+.mainContent {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;	
+	}
+}
 
 
 @media (orientation: portrait) {
@@ -405,6 +646,11 @@ display: inline-grid;
     font-size: 15px;
     display: inline-block;
 }
+
+#export p{
+    font-size: 15px;
+    display: inline-block;
+}
 #export{
 	display: flex;
 	padding: 5%;
@@ -429,8 +675,11 @@ display: inline-grid;
     margin-left: 5%;
 
 }
+
+@media (orientation: landscape) {
 .rightSide {
-	flex: 2;
+	height: 32em;
+	flex: 1;
 	border-radius: 0.1em;
 	border-left: 1px solid black;
 	border-right: 0px;
@@ -438,8 +687,9 @@ display: inline-grid;
 	float: right;
 	overflow: scroll;
 	display: -webkit-scrollbar;
-	height: 28em;
 	}
+}	
+
 .buyitem img{
 	display: block;
 	margin: auto;
