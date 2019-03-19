@@ -266,6 +266,63 @@ section {
 
 #dropD {
 	display: none;
+	margin-top: 2em;
+}
+
+.container {
+  display: block;
+  position: relative;
+  margin-bottom: 1em;
+  padding-left: 2em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  margin-top: 0.5em;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.2em;
+  width: 1.2em;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+ 	top: 7.5px;
+	left: 7.5px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
 
 .mainContent {
@@ -274,8 +331,9 @@ section {
 	overflow: scroll;
 }
 
+
 @media (orientation: portrait) {
-	.mainContent {
+.mainContent {
 	border-top: 2px solid black;
 	border-bottom: 2px solid black;	
 	}
