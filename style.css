@@ -609,7 +609,9 @@ display: inline-grid;
     position:absolute;
     opacity:0;
     text-align:center;
-    width:100%;
+    width:177%;
+    top: 100%;
+    left: -50%;
     font-size:15px;
     padding: 20px;
     color: white;
@@ -617,6 +619,7 @@ display: inline-grid;
     transition:1s;
     z-index: 3;
     margin: auto;
+    overflow: hidden;
 }
 .photo-wrapper img {
     display: block;
@@ -655,6 +658,7 @@ display: inline-grid;
 	display: flex;
 	padding: 5%;
     flex-direction: row;
+    margin-top: 15%;
 }
 #export button{
 	background-color: rgba(150, 25, 0, 0.95);
@@ -672,6 +676,8 @@ display: inline-grid;
 
 #export select{
     float: left;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 5%;
 
 }
