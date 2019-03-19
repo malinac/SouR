@@ -79,12 +79,6 @@
             <img src="proiect%20tw/souvenirs/paris8.jpg"   class="photo-item">
             <img src="proiect%20tw/souvenirs/paris3.jpg"   class="photo-item">
         </div>
-        <div class="export">
-            <button>Export HTML</button>
-            <button>Export CSV</button>
-            <button>Export JSON</button>
-            <button>Export XML</button>
-        </div>
 	</section>
 	<section class="rightSide">
         <h3>Your selected item: </h3>
@@ -92,7 +86,16 @@
         <img src="proiect%20tw/souvenirs/paris7.jpg" width="200" >
         <p style="text-align: center">Price: 10 euro</p>
         <p style="text-align: center">Quantity <input type="number" name="quantity" min="1" max="5"></p>
-        <button>Buy now!</button>
+        <button>Buy online!</button>
+        </div>
+        <div id="export">
+            <p>Export your shopping list: </p><select>
+                <option value="0">Please select a format:</option>
+                <option value="HTML">HTML</option>
+                <option value="CSV">CSV</option>
+                <option value="JSON">JSON</option>
+                <option VALUE="XML">XML</option>
+            </select><button type="submit"><i class="far fa-check-circle"></i></button>
         </div>
 	</section>
   </main>
