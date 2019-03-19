@@ -359,21 +359,33 @@ display: inline-grid;
 	-webkit-transform: scale(1.5); /* Safari 3-8 */
 	transform: scale(2);
 }
-.export{
-	display: inline-block;
-	margin: auto;
-	padding-top: 10%;
+#export p{
+    font-size: 15px;
+    display: inline-block;
 }
-.export button{
-	background-color: #3e7d3e; /* Green */
+#export{
+	display: flex;
+	padding: 5%;
+    flex-direction: row;
+}
+#export button{
+	background-color: rgba(150, 25, 0, 0.95);
 	border: none;
 	color: white;
-	padding: 10px 20px;
+	padding: 6px 6px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
 	font-size: 14px;
 	margin: auto;
+    float:left;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#export select{
+    float: left;
+    margin-left: 5%;
+
 }
 @media (orientation: landscape) {
 .rightSide {
