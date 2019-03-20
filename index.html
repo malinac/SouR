@@ -44,13 +44,30 @@
                 <a class="close" href="#">&times;</a>
                 <div class="content">
                     <p> Embeeded map API </p>
+					<div class="mapouter">
+					<div class="gmap_canvas">
+					<iframe width="700" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=1&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+					</iframe>
+					</div>
+					<style>
+					.mapouter{position:absolute;text-align:right;height:85%;width:90%;}.lic{position:absolute;z-index:999;bottom:-14px;right:0;font-size:11px;font-family:arial;color:#666;}.gmap_canvas {overflow:hidden;background:none!important;height:85%;width:90%;}</style>
+					</div>
                     <a id="buttonHide" class="buttondown" href="#hideOptions">Submit</a>
                 </div>
             </div>
         </div>
         <div id="dropD">
+		
             Check the boxes for the wished souvenirs categories
-            <label class="container">Kids Tehnological Toys
+			<br><br>
+			<label class="date1"> Your trip start date:
+				<input class="date" type="date">
+			</label>
+			<label class="date1"> Your trip end date:
+				<input class="date" type="date">
+			</label>
+			<br>
+            <label class="container">Kids Toys
                 <input type="checkbox" checked="checked" name="radio">
                 <span class="checkmark"></span>
             </label>
@@ -65,7 +82,10 @@
             <label class="container">10 $ Deals
                 <input type="checkbox" name="radio">
                 <span class="checkmark" href="#dropIN"></span>
-                <
+            </label>
+			<label class="container">Tehnology
+                <input type="checkbox" checked="checked" name="radio">
+                <span class="checkmark"></span>
             </label>
         </div>
     </section>

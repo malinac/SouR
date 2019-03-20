@@ -475,6 +475,7 @@ section {
 	cursor: pointer;
 	transition: all 0.3s ease-out;
 	text-align: center;
+	float: right;
 	right: 1%;
 	bottom: 1%;
 }
@@ -556,6 +557,17 @@ section {
 	height: 8px;
 	border-radius: 50%;
 	background: white;
+}
+
+.date1 {
+	display: block;
+	margin: 2px;
+}
+
+.date {
+	border-radius: 3px solid black;
+	float: right;
+	text-align: center;
 }
 
 .mainContent {
