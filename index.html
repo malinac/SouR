@@ -13,7 +13,7 @@
 
   <nav class="top-bar">
 	
-	<a href="index.html"><img src="proiect tw/Travel.jpg" alt="TW" class="logo"></a>
+	<a href="index.html"><img src="proiect%20tw/Travel.jpg" alt="TW" class="logo"></a>
 	<ul>
       <li>
         <a href="https://www.google.com/search?q=travel+blog&rlz=1C1CHBF_enRO817RO817&oq=travel+blog&aqs=chrome..69i57j0l5.3070j0j7&sourceid=chrome&ie=UTF-8">Blog</a>
@@ -46,11 +46,10 @@
                     <p> Embeeded map API </p>
 					<div class="mapouter">
 					<div class="gmap_canvas">
-					<iframe width="700" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=1&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+					<iframe style="width:450px; height:300px; border:none; display:block; overflow: hidden; margin: auto" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=1&ie=UTF8&iwloc=&output=embed" >
 					</iframe>
-					</div>
-					<style>
-					.mapouter{position:absolute;text-align:right;height:85%;width:90%;}.lic{position:absolute;z-index:999;bottom:-14px;right:0;font-size:11px;font-family:arial;color:#666;}.gmap_canvas {overflow:hidden;background:none!important;height:85%;width:90%;}</style>
+                    </div>
+
 					</div>
                     <a id="buttonHide" class="buttondown" href="#hideOptions">Submit</a>
                 </div>
@@ -81,7 +80,7 @@
             </label>
             <label class="container">10 $ Deals
                 <input type="checkbox" name="radio">
-                <span class="checkmark" href="#dropIN"></span>
+                <span class="checkmark" data-href="#dropIN"></span>
             </label>
 			<label class="container">Tehnology
                 <input type="checkbox" checked="checked" name="radio">
@@ -93,40 +92,40 @@
         <h3>Your results are: </h3>
         <div id="photo-container">
             <div class="photo-wrapper">
-            <img src="proiect%20tw/souvenirs/paris1.jpg"   class="photo-item">
-                <p>Price: 10 Euro</p>
+            <img src="proiect%20tw/souvenirs/paris1.jpg"   class="photo-item" alt="example">
+                <p>Price: 10$</p>
             </div>
             <div class="photo-wrapper">
-                <img src="proiect%20tw/souvenirs/paris6.jpg"   class="photo-item">
-                <p>Price: 10 Euro</p>
+                <img src="proiect%20tw/souvenirs/paris6.jpg"   class="photo-item" alt="example">
+                <p>Price: 20 $</p>
             </div>
             <div class="photo-wrapper">
-                <img src="proiect%20tw/souvenirs/paris2.jpg"   class="photo-item">
-                <p>Price: 10 Euro</p>
+                <img src="proiect%20tw/souvenirs/paris2.jpg"   class="photo-item" alt="example">
+                <p>Price: 13 $</p>
             </div>
             <div class="photo-wrapper">
-                <img src="proiect%20tw/souvenirs/paris5.jpg"   class="photo-item">
-                <p>Price: 10 Euro</p>
+                <img src="proiect%20tw/souvenirs/paris5.jpg"   class="photo-item" alt="example">
+                <p>Price: 15 $</p>
             </div>
             <div class="photo-wrapper">
-                <img src="proiect%20tw/souvenirs/paris7.jpg"   class="photo-item">
-                <p>Price: 10 Euro</p>
+                <img src="proiect%20tw/souvenirs/paris7.jpg"   class="photo-item" alt="example">
+                <p>Price: 10 $</p>
             </div>
             <div class="photo-wrapper">
-                <img src="proiect%20tw/souvenirs/paris4.jpg"   class="photo-item">
-                <p>Price: 10 Euro</p>
+                <img src="proiect%20tw/souvenirs/paris4.jpg"   class="photo-item" alt="example">
+                <p>Price: 10 $</p>
             </div>
             <div class="photo-wrapper">
-                <img src="proiect%20tw/souvenirs/paris9.jpg"   class="photo-item">
-                <p>Price: 10 Euro</p>
+                <img src="proiect%20tw/souvenirs/paris9.jpg"   class="photo-item" alt="example">
+                <p>Price: 10 $</p>
             </div>
             <div class="photo-wrapper">
-                <img src="proiect%20tw/souvenirs/paris8.jpg"   class="photo-item">
-                <p>Price: 10 Euro</p>
+                <img src="proiect%20tw/souvenirs/paris8.jpg"   class="photo-item" alt="example">
+                <p>Price: 10 $</p>
             </div>
             <div class="photo-wrapper">
-                <img src="proiect%20tw/souvenirs/paris3.jpg"   class="photo-item">
-                <p>Price: 10 Euro</p>
+                <img src="proiect%20tw/souvenirs/paris3.jpg"   class="photo-item" alt="example">
+                <p>Price: 10 $</p>
             </div>
         </div>
 
@@ -134,8 +133,8 @@
 	<section class="rightSide">
         <h3>Your selected item: </h3>
         <div class ="buyitem">
-        <img src="proiect%20tw/souvenirs/paris7.jpg" width="200" >
-        <p style="text-align: center">Price: 10 euro</p>
+        <img src="proiect%20tw/souvenirs/paris7.jpg" width="200" alt="example" >
+        <p style="text-align: center">Price: 10 $</p>
         <p style="text-align: center">Quantity <input type="number" name="quantity" min="1" max="5"></p>
         <button>Buy online!</button>
         </div>
