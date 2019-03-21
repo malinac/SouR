@@ -22,7 +22,6 @@ body {
 
 
 nav {
-    position: relative;
     z-index: 10;
     margin: 0.25em;
     position: sticky;
@@ -727,5 +726,5 @@ display: inline-grid;
 }
 
 .mapouter{position:absolute;text-align:right;height:85%;width:90%;}
-.lic{position:absolute;z-index:999;bottom:-14px;right:0;font-size:11px;font-family:Arial;color:#666;}
+.lic{position:absolute;z-index:999;bottom:-14px;right:0;font-size:11px;font-family: Arial;color:#666;}
 .gmap_canvas {overflow:hidden;background:none!important;height:85%;width:90%;}
