@@ -56,9 +56,10 @@
             </div>
         </div>
         <div id="dropD">
-		
+			
             Check the boxes for the wished souvenirs categories
 			<br><br>
+			<form action="createVar.php" method="get">
 			<label class="date1"> Your trip start date:
 				<input class="date" type="date">
 			</label>
@@ -67,7 +68,7 @@
 			</label>
 			<br>
             <label class="container">Kids Toys
-                <input type="checkbox" checked="checked" name="radio">
+                <input type="checkbox" name="radio">
                 <span class="checkmark"></span>
             </label>
             <label class="container">Traditional items
@@ -83,9 +84,11 @@
                 <span class="checkmark" data-href="#dropIN"></span>
             </label>
 			<label class="container">Tehnology
-                <input type="checkbox" checked="checked" name="radio">
+                <input type="checkbox" name="radio">
                 <span class="checkmark"></span>
             </label>
+			<button id="buttonHide" class="buttondown">Submit</button>
+			</form>
         </div>
     </section>
 	<section class="mainContent">
