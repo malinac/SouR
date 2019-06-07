@@ -260,11 +260,16 @@ section {
 .popup .close:hover {
     color: hsl(240, 100%, 95%);
 }
-.popup .content {
-    text-align: center;
-    display: block;
-    max-height: 30%;
-    overflow: auto;
+.popup .gridcontainer {
+    display: grid;
+	padding: 10px;
+}
+
+.popup .gridcontainer .item {
+	text-align: left;
+	padding: 10px;
+	background-color: rgba(111,41,97,.3);
+	border: 2px solid rgba(111,41,97,.5);
 }
 
 .popup .buttondown {
@@ -278,8 +283,8 @@ section {
     cursor: pointer;
     transition: all 0.3s ease-out;
     text-align: center;
-    right: 1%;
-    bottom: 1%;
+    right: 2%;
+    bottom: 2%;
 }
 
 .popup .buttondown:hover {

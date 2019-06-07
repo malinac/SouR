@@ -38,19 +38,28 @@
             <h5 class="bbox"> First you should set your trip </h5>
             <a class="bbutton" href="#popup1"> Press this Button to open the map </a>
         </div>
+		<form action="createVar.php" method="post">
         <div id="popup1" class="overlay">
             <div class="popup">
-                <h5> Set your trip on the map </h5>
+                <h5> Choose the cities you'll visit during your trip </h5>
                 <a class="close" href="#">&times;</a>
-                <div class="content">
-                    <p> Embeeded map API </p>
-					<div class="mapouter">
-					<div class="gmap_canvas">
-					<iframe style="width:450px; height:300px; border:none; display:block; overflow: hidden; margin: auto" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=1&ie=UTF8&iwloc=&output=embed" >
-					</iframe>
-                    </div>
-
-					</div>
+                    <p>  </p>
+					<div class="gridcontainer">
+					<input class="item" type="checkbox" name="city1" value="Paris"> Paris<br>
+					<input class="item" type="checkbox" name="city2" value="Barcelona"> Barcelona<br>
+					<input class="item" type="checkbox" name="city3" value="Berlin"> Berlin<br>
+					<input class="item" type="checkbox" name="city4" value="Londra"> Londra<br>
+					<input class="item" type="checkbox" name="city5" value="Iasi"> Iasi<br>
+					<input class="item" type="checkbox" name="city6" value="Bucuresti"> Bucuresti<br>
+					<input class="item" type="checkbox" name="city7" value="Budapesta"> Budapesta<br>
+					<input class="item" type="checkbox" name="city8" value="Istanbul"> Istanbul<br>
+					<input class="item" type="checkbox" name="city9" value="Praga"> Praga<br>
+					<input class="item" type="checkbox" name="city10" value="Haga"> Haga<br>
+					<input class="item" type="checkbox" name="city11" value="Copenhaga"> Copenhaga<br>
+					<input class="item" type="checkbox" name="city12" value="Oslo"> Oslo<br>
+					<input class="item" type="checkbox" name="city13" value="Rio de Janeiro"> Rio de Janeiro<br>
+					<input class="item" type="checkbox" name="city14" value="Los Angeles"> Los Angeles<br>
+					<input class="item" type="checkbox" name="city15" value="New York"> New York<br>
                     <a id="buttonHide" class="buttondown" href="#hideOptions">Submit</a>
                 </div>
             </div>
@@ -59,32 +68,31 @@
 			
             Check the boxes for the wished souvenirs categories
 			<br><br>
-			<form action="createVar.php" method="get">
-			<label class="date1"> Your trip start date:
-				<input class="date" type="date">
+			<label class="date1" > Your trip start date:
+				<input class="date" type="date" name="startDate" min="2019-06-15" max="2099-06-15" required>
 			</label>
 			<label class="date1"> Your trip end date:
-				<input class="date" type="date">
+				<input class="date" type="date"  name="endDate" min="2019-06-15" max="2099-06-15" required>
 			</label>
 			<br>
             <label class="container">Kids Toys
-                <input type="checkbox" name="radio">
+                <input type="checkbox" value="fun" name="attr1">
                 <span class="checkmark"></span>
             </label>
-            <label class="container">Traditional items
-                <input type="checkbox" name="radio">
+            <label class="container" >Traditional items
+                <input type="checkbox" value="historical" name="attr2">
                 <span class="checkmark"></span>
             </label>
-            <label class="container">Fashion/ Clothing
-                <input type="checkbox" name="radio">
+            <label class="container" >Fashion/ Clothing
+                <input type="checkbox" value="cosmetics" name="attr3">
                 <span class="checkmark"></span>
             </label>
-            <label class="container">10 $ Deals
-                <input type="checkbox" name="radio">
+            <label class="container" >10 $ Deals
+                <input type="checkbox" name="attr4">
                 <span class="checkmark" data-href="#dropIN"></span>
             </label>
-			<label class="container">Tehnology
-                <input type="checkbox" name="radio">
+			<label class="container" >Tehnology
+                <input type="checkbox" name="attr5" value="practical">
                 <span class="checkmark"></span>
             </label>
 			<button id="buttonHide" class="buttondown">Submit</button>
