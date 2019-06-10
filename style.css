@@ -89,6 +89,7 @@ nav li a {
     text-align: left;
     border-left: 5px #00a;
     border-right: 5px #00a;
+    color: white;
 }
 
 nav li a:hover {
@@ -233,8 +234,6 @@ section {
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 56%;
-    height: 70%;
     background: rgba(240, 240, 240, 1);
     position: relative;
     transition: all 2s ease-in-out;
@@ -242,10 +241,10 @@ section {
 }
 
 .popup h5 {
-    left: 5%;
     margin-top: 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
+    padding: 10px;
 }
 .popup .close {
     position: absolute;
@@ -263,6 +262,7 @@ section {
 .popup .gridcontainer {
     display: grid;
 	padding: 10px;
+    grid-template-columns: 20px 200px;
 }
 
 .popup .gridcontainer .item {
