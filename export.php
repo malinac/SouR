@@ -10,6 +10,7 @@ $fn = fopen("newfile.txt", "r");
 
 if ($option == 'CSV') {
     $nf = fopen("products.csv", "w") or die("Unable to open file!");
+    fwrite($nf, 'name,price,location'."\n");
     while(! feof($fn)) {
     $id = trim(fgets($fn));
     if (!empty($id)) {
@@ -19,7 +20,7 @@ if ($option == 'CSV') {
         if ($result === false) {
             echo "error while executing mysql: " . mysqli_error($mysql);
         } else {
-                $s = $row[0] . ',' . $row[1] . ',' . $row[2]."\n";
+                $s = $row[1] . ',' . $row[4] . ',' . $row[3].','.$row[2]."\n";
                 fwrite($nf, $s);
             }
 
@@ -40,8 +41,8 @@ elseif($option == 'JSON') {
             if ($result === false) {
                 echo "error while executing mysql: " . mysqli_error($mysql);
             } else {
-                $s_array[] = array('id' => $row[0],
-                    'name' => $row[1]);
+                $s_array[] = array('name' => $row[1],
+                    'price' => $row[4]);
             }
         }
     }
@@ -54,7 +55,7 @@ elseif($option == 'JSON') {
 elseif($option == 'XML'){
     $xml=new DOMDocument("1.0");
     $xml->formatOutput=true;
-    $top=$xml->createElement("List_of_Recomandations");
+    $top=$xml->createElement("List_of_Recommendations");
     $xml->appendChild($top);
     while (!feof($fn)) {
         $id = trim(fgets($fn));
@@ -71,10 +72,37 @@ elseif($option == 'XML'){
                 $product->appendChild($name);
                 $price = $xml->createElement("price", $row[4]);
                 $product->appendChild($price);
+                $s = $row[3].', '.$row[2];
+                $location = $xml->createElement("location", $s);
+                $product->appendChild($location);
+
             }
         }
     }
     echo "<xmp>".$xml->saveXML()."</xmp>";
+}
+elseif ($option == 'HTML'){
+    $nf = fopen("products.html", "w") or die("Unable to open file!");
+    $s = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Recommended</title></head><body><h2>List of recommendations</h2><dl>';
+    fwrite($nf, $s);
+    while (!feof($fn)) {
+        $id = trim(fgets($fn));
+        if (!empty($id)) {
+            $sql = "SELECT * FROM PRODUCTS where id =" . $id;
+            $result = mysqli_query($mysql, $sql);
+            $row = mysqli_fetch_row($result);
+            if ($result === false) {
+                echo "error while executing mysql: " . mysqli_error($mysql);
+            } else {
+                $s = '<dt>'.$row[1].'</dt>'.'<dd>'.'Price: '.$row[4].'</dd>'.'<dd>'.'Location: '.$row[3].', '.$row[2].'</dd>';
+                fwrite($nf,$s);
+            }
+        }
+    }
+    $s = '</dl></body></html>';
+    fwrite($nf,$s);
+    fclose($nf);
+    echo file_get_contents("products.html");
 }
 
 
