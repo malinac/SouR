@@ -152,13 +152,5 @@ else {
 
 }
 return $rez;}
-/*$returnedString = "";
 
-while ($inreg = $rez->fetch_assoc()) {
-    $returnedString .= ('<div class=photo-wrapper><img src=' . $inreg['path'] . '   class=photo-item alt=' . $inreg['type'] . ' onclick=handlePress(' . json_encode($inreg) . ')><p>Price: ' . $inreg['price'] . '</p></div>');
-}
-
-echo $returnedString;
-
-$mysql->close();*/
 ?>

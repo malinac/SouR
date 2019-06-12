@@ -13,18 +13,24 @@
 
         function handlePress(e) {
 
-            if (!b.includes(e.path)) {
                 var element = document.querySelector("#unique");
-                a.push(e);
-                b.push(e.path);
+                element.innerHTML = '';
                 var x = document.createElement("img");
                 x.setAttribute("src", e.path);
                 x.setAttribute("width", "200");
                 x.setAttribute("alt", e.type);
                 element.appendChild(x);
-            }
+
             var element2 = document.querySelector("#pricing");
-            element2.textContent = element2.textContent.split(' ')[0] + ' ' + String(Number(element2.textContent.split(' ')[1]) + Number(e.price)) + ' ' + element2.textContent.split(' ')[2];
+            element2.textContent = element2.textContent.split(' ')[0] + ' '+e.price + ' ' + element2.textContent.split(' ')[2];
+            var element3 = document.querySelector("#name");
+            if( typeof  e.name.split('_')[1] ==='undefined'){
+                element3.textContent = element3.textContent.split(' ')[0] + ' ' + e.name;
+            }
+            else{
+                element3.textContent = element3.textContent.split(' ')[0] + ' ' + e.name.split('_')[0]+' '+ e.name.split('_')[1];
+            }
+
         }
     </script>
 </head>
@@ -111,7 +117,7 @@
                 <input type="checkbox" name="attr4">
                 <span class="checkmark" data-href="#dropIN"></span>
             </label>
-			<label class="container" >Technology
+			<label class="container" >Practical
                 <input type="checkbox" name="attr5" value="practical">
                 <span class="checkmark"></span>
             </label>
@@ -136,8 +142,7 @@
 		<div id= "unique">
         
         </div>
-            <p style="text-align: center" id="name"> Name: </p>
-            <p style="text-align: center" id="location"> Location: </p>
+            <p style="text-align: center" id="name"> Name: -</p>
 		    <p style="text-align: center" id="pricing">Price: 0 $</p>
 
         </div>
